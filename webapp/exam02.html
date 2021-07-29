@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="/jquery/jquery/jquery-1.12.4.js"></script>
+
+<title>Insert title here</title>
+</head>
+<body>
+	
+	<h1>자바 스크립트</h1>
+	<h2>변수 선언</h2>
+
+	<p>개발자 모드 console 탭에서 확인</p>
+
+</body>
+
+	<script type="text/javascript">
+	//변수 선언법
+	//자료형을 쓰지 않는다
+	console.log("변수선언=======================");
+	var no;
+	var str;
+	var boo;
+	no = 1;
+	str = "안녕하세요";
+	boo = true;
+	
+	console.log(typeof no);
+	console.log(typeof str);
+	console.log(typeof boo);
+	</script>
+
+	<script type="text/javascript">
+	//같은 이름의 변수 선언이 가능하다
+	var name = "정우성";
+	console.log(name);
+	
+	var name = "유재석";
+	console.log(name);
+	</script>
+	
+	<script type="text/javascript">
+	//자료형은 대입시 결정된다
+	var data;
+	console.log(typeof data);	//undefined(정의되지 않은)
+	
+	data = 15;
+	console.log(typeof data);	//number
+	
+	data = "안녕";
+	console.log(typeof data);	//string
+	
+	data = 3>5;
+	console.log(typeof data);	//boolean
+	</script>
+	
+	<script type="text/javascript">
+	//null과 undifined 비교
+	var myVar01;
+	var myVar02 = null;
+
+	console.log(myVar01);	//undifined
+	console.log(myVar02);	//null
+	</script>
+	
+	<script type="text/javascript">
+	//동등(==)			서로의 자료형을 일치시킨 후, 값을 비교
+	console.log(123 == 123);	//true
+	console.log(123 == '123');	//true
+	
+	//일치(===)			서로의 자료형과 값을 각각 비교
+	console.log(123 === 123);	//true
+	console.log(123 === '123');	//false 서로의 자료형이 다르기 때문(숫자, 문자열)
+	
+	</script>
+
+</html>
