@@ -9,14 +9,48 @@
 
 <body>
 
-	<ul>
-		<li>첫번째 아이템입니다.</li>
-		<li>두번째 아이템입니다.</li>
-		<li class="del">삭제할  아이템입니다.</li>
-		<li>네번째 아이템입니다.</li>
-		<li class="del">삭제할  아이템입니다.</li>
-		<li>다섯 번째 아이템입니다.</li>
-	</ul>
+	<script type="text/javascript">
+		//기명 함수, 선언적 함수
+		
+		var sum = plus(3, 5);
+		document.write(sum);
+		
+		document.write("<br>");
+		
+		var result = plus(2.7, 3.5);
+		document.write(result);
+		
+		document.write("<br>");
+		
+		var str = plus("안녕", "하세요");
+		document.write(str);
+		
+		document.write("<br>");
+		
+		//함수 정의
+		function plus(a, b) {	//funcion으로 정의된 함수들은, 가장 먼저 읽어지기 때문에 위치에 구애받지 않는다
+			var sum = a+b;
+			return sum;
+		}
+		
+		//익명 함수		
+		//이름이 없기 때문에, 바로 사용되어야 함, 변수에 담아 사용할 경우
+		//변수로 인식되기 때문에, 순차적으로 실행되어야 한다
+		var minus = function (a, b)  {	//변수에 함수를 담아서 사용하면, 여러번 사용 가능하다
+						var sum = a-b;
+						return sum;
+					}
+		console.log(typeof minus);		//function 자료형으로 출력된다
+		
+		//실행
+		var result2 = minus(5, 7.5);	
+		document.write(sum);
+		
+		document.write("<br>");
+
+		
+		
+	</script>
 
 </body>
 	
