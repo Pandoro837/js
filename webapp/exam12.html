@@ -2,28 +2,79 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<script type="text/javascript" src="/jquery/jquery/jquery-1.12.4.js"></script>
-<style>
-	.red {color: red;}
-	
-	.blue {color: blue;}
-
-</style>
-
 
 <title>Insert title here</title>
 </head>
 
 <body>
 
-	이름:<input type="text" name="name" /><br>
-	비밀번호:<input type="password" name="password" /><br>
-	<textarea name="content"></textarea>
-	<br><br>
-	이름2:<input type="text" name="name2" value="홍길동"/><br>
-	비밀번호2:<input type="password" name="password2" value="1234"/><br>
-	<textarea name="content2">산토끼토끼야</textarea>
+	<h1>배열</h1>
 	
+	<script type="text/javascript">
+	
+	/* 
+	var array = [];
+	
+	array[0] = 1;
+	array[1] = 2.5;
+	array[2] = "안녕";
+	array[4] = "hello!!!";
+	
+	console.log(array);
+	console.log(array[0]);
+	console.log(array[1]);
+	console.log(array[2]);
+	console.log(array[3]);		//empty, undifined
+	console.log(array[4]); 
+	*/
+	
+	/* 
+	var array01 = [273, 32, 1.5, "안녕"];
+	
+	console.log(array01);
+
+	array01[4] = 52;
+	console.log(array01);
+
+	array01.push(100);			//push를 이용해 값을 추가하면, 배열의 가장 마지막 위치에 추가된다
+	console.log(array01);		
+	
+	array01.pop();				//마지막 값을 날린다
+	console.log(array01);
+	
+	for(var count = 0; count < array01.length; count++){
+		document.write(array01[count]);
+		document.write("<br>");
+	}
+	 */
+	 
+	 //기명함수 -> 위치에 상관 잆이 등록
+	 function sum(a, b){
+		 return a+b;
+	 }
+	 
+	 var sum2 = function (){
+					 return 3+4;
+				}
+	 
+	 var array02 = [273, 1.3, "안녕", 3>2, sum, sum2, function(){return "익명함수";},[11, 12, 13]];	//sum()이면 실행시킨 값을 넣는다
+	
+	 console.log(array02[0]);
+	 console.log(array02[1]);
+	 console.log(array02[2]);
+	 console.log(array02[3]);
+	 console.log(array02[4]);		//실행하지 않고 출력할 경우, 함수의 구조를 보여준다
+	 console.log(array02[4](3, 5));		
+	 console.log(array02[5]());
+	 console.log(array02[6]());
+	 console.log(array02[7]);		//배열의 내부에 배열을 넣을 수 있다(2차원 배열)
+	 console.log(array02[7][0]);
+	 console.log(array02[7][1]);
+	 console.log(array02[7][2]);
+
+	 
+	 </script>
+		
 </body>
 	
 
