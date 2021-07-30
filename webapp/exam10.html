@@ -9,14 +9,24 @@
 
 <body>
 
-	<ul>
-		<li class="del">첫번째 아이템입니다.</li>
-		<li class="del"><strong>두번째 아이템입니다.</strong></li>
-		<li class="del">세번째<br> 아이템입니다.</li>
-		<li><strong>네번째 아이템입니다.</strong></li>
-		<li>다섯번째 아이템입니다.</li>
-	</ul>
-
+	<script type="text/javascript">
+	
+		//(2) test에 익명함수 대입
+		var test = function(){
+			console.log("test 익명함수");
+		}
+		
+		
+		//(1) 기명함수가 먼저 정의
+		function test(){
+			console.log("test 기명함수");
+		}
+		
+		//(3) 나중에 대입된 익명 함수가 test()가 된다
+		test();
+	
+	</script>
+	
 </body>
 	
 
