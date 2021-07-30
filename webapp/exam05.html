@@ -8,20 +8,34 @@
 </head>
 
 <body>
-	<ul>
-		<li class="first"> 텍스트1 텍스트1 텍스트1 텍스트1 텍스트1 </li>
-		<li class="second"> 텍스트2 텍스트2 텍스트2 텍스트2 텍스트2 </li>
-		<li > 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
-		<li class="first"> 텍스트1 텍스트1 텍스트1 텍스트1 텍스트1 </li>
-		<li class="second"> 텍스트2 텍스트2 텍스트2 텍스트2 텍스트2 </li>
-		<li > 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
-		<li class="first"> 텍스트1 텍스트1 텍스트1 텍스트1 텍스트1 </li>
-		<li class="second"> 텍스트2 텍스트2 텍스트2 텍스트2 텍스트2 </li>
-		<li > 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
-		<li class="first"> 텍스트1 텍스트1 텍스트1 텍스트1 텍스트1 </li>
-		<li class="second"> 텍스트2 텍스트2 텍스트2 텍스트2 텍스트2 </li>
-		<li > 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
-	</ul>
+	<script type="text/javascript">
+		
+		var code = prompt();
+		console.log(typeof code);
+		
+		switch(code){				//대상을 ===로 구분
+			case '1':
+				console.log(code);
+				document.write("R101호");
+				break;
+			case '2':	
+				console.log(code);
+				document.write("R202호");
+				break;
+			case '3':	
+				console.log(code);
+				document.write("R303호");
+				break;
+			case '4':	
+				console.log(code);
+				document.write("R404호");
+				break;
+			default:
+				console.log(code);
+				document.write("없는 번호입니다");
+				break;
+		}
+	</script>
 </body>
 	
 
