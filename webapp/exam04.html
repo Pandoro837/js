@@ -8,13 +8,39 @@
 </head>
 
 <body>
-	<ul>
-		<li class="red"> 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
-		<li class="blue"> 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
-		<li class="red"> 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
-		<li class="blue"> 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
-		<li class="green"> 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
-	</ul>
+	<h1>if문 예제</h1>
+
+	<script type="text/javascript">
+		var num = prompt();
+		
+		console.log(typeof num);		//prompt로 받은 값은 문자형으로 입력된다
+		
+		/* var num2 = parseInt(num); */
+		var num2 = Number(num);			//자료형을 숫자형으로 형변환, 문자는 String();
+		
+		console.log(typeof num2);
+		
+		if(num2 === 0) {					//자료형이 달라서 false로 판단한다
+			console.log("0점입니다.");
+			document.write("0점입니다.");
+		}
+		
+		/* if(num == 0) {					//공백을 입력해도 true로 판단한다
+			console.log("0점입니다.");
+			document.write("0점입니다.");
+		} */
+		
+		/* if(num > 0) {
+			document.write("양수")
+			console.log("양수")
+		} else if(num < 0) {
+			document.write("음수")
+			console.log("음수")
+		} else {
+			document.write("0")
+			console.log("0")
+		} */
+	</script>
 
 </body>
 	
