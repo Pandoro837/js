@@ -6,10 +6,65 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<div>
-		<input id="btn" type="button" VALUE="js테스트버튼" />
-		<h1 id="display">이름출력영역</h1>
-	</div>
+	
+	<h1>객체</h1>
+
+	<script type="text/javascript">
+	
+		var personVo01 = {
+			name:"정우성",
+			password:"1234",
+			content:"안녕하세요",
+			showInfo: function() {
+					  		console.log(this.name + "," + this.password +","+this.content)
+					  }
+		};
+		
+		var personVo02 = {
+				name:"이효리",
+				password:"1234",
+				content:"안녕하세요",
+				showInfo: function() {
+						  		console.log(this.name + "," + this.password +","+this.content)
+						  }
+			};
+		
+		var personVo03 = {
+				name:"유재석",
+				password:"1234",
+				content:"안녕하세요",
+				showInfo: function() {
+						  		console.log(this.name + "," + this.password +","+this.content)
+						  }
+			};
+		
+		/* 
+		console.log(personVo.name);
+		console.log(personVo.password);
+		console.log(personVo.content);
+		personVo.showInfo();
+		
+		var name = personVo.name;
+		console.log(name);
+		var password = personVo["password"];
+		console.log(password); 
+		*/
+		/* 
+		var array = [personVo01, personVo02, personVo03];
+		 */
+		var array = [];
+		 
+		array[0] = personVo01;
+		array[1] = personVo02;
+		array.push(personVo03);
+		console.log(array);
+		
+		for(var i = 0; i < array.length; i++) {
+			document.write(array[i].name);
+			document.write("<br>");
+		}
+		
+	</script>
 
 </body>
 
