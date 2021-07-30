@@ -2,27 +2,50 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<script type="text/javascript" src="/jquery/jquery/jquery-1.12.4.js"></script>
-<style>
-	.red {color: red;}
-	
-	.blue {color: blue;}
-
-</style>
-
 
 <title>Insert title here</title>
 </head>
 
 <body>
 
-	<ul>
-		<li id="first" class="red">첫번째 아이템입니다.</li>
-		<li id="second" class="blue"><strong>두번째 아이템입니다.</strong></li>
-		<li id="third" class="del">세번째아이템입니다.</li>
-		<li><strong>네번째 아이템입니다.</strong></li>
-		<li>다섯번째 아이템입니다.</li>
-	</ul>
+	<h1>변수의 범위</h1>
+	
+	<script type="text/javascript">
+		
+		/* var name = "grobal";		//전역변수
+		
+		function checkscope(){
+			var name = "local";		//var name이 생겨서, 작동한 이후 사라짐(지역변수)
+			console.log(name);
+		}
+		
+		checkscope();
+		console.log(name); */
+		
+		/* var name = "grobal";
+		
+		function checkscope(){
+			name = "local";			//name이라는 변수에, local이라는 값을 넣어라
+			console.log(name);		//local
+		}
+		
+		checkscope();
+		console.log(name); */		//local
+		
+		var name = "grobal";
+		
+		function checkscope(){
+			name = "loacl";
+			name2 = "로컬";			//존재하지 않는 name2에 값을 넣으면, 암묵적으로 전역변수가 생성
+			console.log(name);
+		}
+		
+		checkscope();		//local
+		
+		console.log(name);	//local
+		console.log(name2); //"로컬"
+		
+	</script>
 
 </body>
 	
