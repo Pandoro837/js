@@ -2,21 +2,67 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<script type="text/javascript" src="/jquery/jquery/jquery-1.12.4.js"></script>
 <title>Insert title here</title>
 </head>
 <body>
+
+	<h1>이벤트</h1>
 	
-	<ul>
-		<li id="first" class="red">첫번째 아이템입니다.</li>
-		<li id="second" class="blue"><strong>두번째 아이템입니다.</strong></li>
-		<li id="third" class="del">세번째아이템입니다.</li>
-		<li><strong>네번째 아이템입니다.</strong></li>
-		
-	</ul>
+	<h2>h2태그_1</h2>
+	<h2>h2태그_2</h2>
+	<h2>h2태그_3</h2>
+
+	<h3 class="tagh3">h3태그_1</h3>
+	<h3 class="tagh3">h3태그_2</h3>
+	<h3 class="tagh3">네이버</h3>
+	<h3>다음</h3>
+	
+
+	<div>
+		<button id = "btn">js Test</button>
+		<p id = "display">이름 출력영역</p>
+	</div>
+	<script type="text/javascript">
+	</script>
 
 </body>
-
-
-
+<!-- 
+m = data html 태그
+v = view css
+c = control js
+ -->
+ 
+ <script type="text/javascript">
+ 	//window.onload 모든 요소가 로딩 된 이후에, function의 내용이 실행된다
+ 	window.onload = function(){			
+	 					var testButton = document.getElementById("btn");	//id 값이 btn인 element를 가져온다
+	 					var testArea = document.getElementById("display");	//id 값이 display인 element를 가져온다
+	 					var testArea_h1 = document.getElementsByTagName("h1");
+	 					var h2 = document.getElementsByTagName("h2");
+	 					console.log(h2);
+	 					
+	 					console.log(testButton);
+	 					console.log(testArea);
+	 					
+	 					var h3 = document.getElementsByClassName("tagh3");
+	 					console.log(h3);
+	 					
+	 					var daum = (document.getElementsByTagName("h3"))[3];
+	 					
+	 					//onclick - 버튼이 클릭되었을 때
+	 					testButton.onclick = function() {
+	 											//innerHTML 해당 태그의 내부값을 = 이하로 정의한다
+	 											testArea.innerHTML = "홍길동";
+	 										 };
+	 					
+	 					//h2 택의 index 값이 1(두번째)를 클릭 할 때, function의 내용을 실행해라
+	 					h2[1].onclick = function(){
+	 										testArea.innerHTML = "정우성";
+	 									}
+	 					daum.onclick = function() {
+	 										testArea_h1[0].innerHTML = '<a href="http://www.daum.net">다음</a>';
+	 								  }
+ 					};
+ </script>
+ 
 </html>
