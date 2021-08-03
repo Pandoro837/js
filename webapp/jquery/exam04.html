@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="/js/assets/js/jquery/jquery-1.12.4.js"></script>
+<link rel="shortcut icon" href="#">
+<title>Insert title here</title>
+</head>
+
+<body>
+	<ul>
+		<li class="red"> 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
+		<li class="blue"> 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
+		<li class="red"> 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
+		<li class="blue"> 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
+		<li class="green"> 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
+	</ul>
+
+</body>
+	
+	<script type="text/javascript">
+		//$(".red").css("color", "red");		//클래스를 선택자로 사용할 경우, .ClassName으로 선택한다
+		//$(".blue").css("color", "blue");
+		
+		$(".red, .green").css("color", "blue");	//둘 이상의 클래스를 선택할 경우, 클래스명 이후에 ','를 붙여 이후에 올 클래스를 선택한다
+		$("ul li.blue").css("color", "green");
+	</script>
+
+
+</html>
