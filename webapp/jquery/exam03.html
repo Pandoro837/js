@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="/js/assets/js/jquery/jquery-1.12.4.js"></script>
+<link rel="shortcut icon" href="#">
+<title>Insert title here</title>
+</head>
+<body>
+	
+	
+	<ul>
+		<li id="first"> 텍스트1 텍스트1 텍스트1 텍스트1 텍스트1 </li>
+		<li id="second"> 텍스트2 텍스트2 텍스트2 텍스트2 텍스트2 </li>
+		<li id="third"> 텍스트3 텍스트3 텍스트3 텍스트3 텍스트3 </li>
+		<li id="fourth"> 텍스트4 텍스트4 텍스트4 텍스트4 텍스트4 </li>
+		<li id="first"> 텍스트1-1 텍스트1-1 텍스트1-1 텍스트1-1 텍스트1-1 </li>
+	</ul>
+
+
+</body>
+	
+	<script type="text/javascript">
+		$("#second").css("color", "red");	//ID를 선택자로 사용할 경우, #ID로 선택한다
+
+		$("#fourth").css("color", "blue");
+		
+		$("#first").css("color", "green");	//같은 ID가 2개 이상일 경우, 먼저 선언한 ID에만 적용된다(id 지정부터 실수)
+			
+	</script>
+
+
+</html>
