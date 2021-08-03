@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="/js/assets/js/jquery/jquery-1.12.4.js"></script>
+<style>
+	.red {color: red;}
+	
+	.blue {color: blue;}
+
+</style>
+
+
+<title>Insert title here</title>
+</head>
+
+<body>
+
+	이름:<input type="text" name="name" /><br>
+	비밀번호:<input type="password" name="password" /><br>
+	<textarea name="content"></textarea>
+	<br><br>
+	이름2:<input type="text" name="name2" value="홍길동"/><br>
+	비밀번호2:<input type="password" name="password2" value="1234"/><br>
+	<textarea name="content2">산토끼토끼야</textarea>
+	
+</body>
+
+	<script type="text/javascript">
+		$("[name=name]").val("최영교");			//.val("텍스트")	- 선택자의 value 값에 ("텍스트")를 입력
+		$("[name=password]").val("123");
+		$("[name=content]").val("학교종이 땡땡땡");
+		
+		var name2 = $("[name=name2]").val();		//.val()			- 선택자의 value 값을 읽어온다
+		console.log(name2);
+		var password2 = $("[name=password2]").val();
+		console.log(password2);
+		var content2 = $("[name=content2]").val();
+		console.log(content2);
+		
+		var guestBookVo = {
+				name:name2,						//$("[name=name2]").val();
+				password:password2,				//$("[name=password2]").val();
+				content:content2				//$("[name=content2]").val();
+		};
+		
+		console.log(guestBookVo);
+		
+	</script>	
+
+</html>
