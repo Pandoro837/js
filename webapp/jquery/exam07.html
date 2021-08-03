@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="/js/assets/js/jquery/jquery-1.12.4.js"></script>
+
+<title>Insert title here</title>
+</head>
+
+<body>
+	<p id="p1"> abcdefghijklmn </p>
+	<p id="p2"> 학교종이 땡땡땡<br /> abcdefg </p>
+</body>
+
+	<script type="text/javascript">
+		//.text와의 차이점
+		$("#p1").html("가나다라 <strong>마바사</strong>");		//내부의 <태그>가 태그로서 작동한다, text는 단순히 글자로 입력
+		
+		var str = $("#p2").html();								//내부의 태그 역시 읽어온다
+		console.log(str);
+		
+		str = $("#p2").text();									//내부의 태그를 읽지 않는다
+		console.log(str);
+		
+	</script>	
+
+</html>
