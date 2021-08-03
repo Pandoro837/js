@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="/js/assets/js/jquery/jquery-1.12.4.js"></script>
+<link rel="shortcut icon" href="#">
+<title>Insert title here</title>
+</head>
+
+<body>
+	<p id="p1"> abcdefghijklmn </p>
+	<p id="p2"> 학교종이 땡땡땡 abcdefg </p>
+	<p id="p3"> 학교종이 땡땡땡 <strong>abcdefg</strong> </p>
+</body>
+
+	<script type="text/javascript">
+		//$("#p1").text("안녕하세요");		//text 이하의 값을 선택된 대상에 대입, 내부에 값을 지우고 싶을 때는""로 빈 문자열을 넣어야 한다 - text("");
+
+		var str = $("#p1").text();			//text 파라미터 값이 없을 경우, 대상의 값을 가져온다
+		console.log(str);
+		
+		$("#p2").text("가나다라 <h2>마바사</h2>"); //text는 내부의 값을 모두 텍스트로 인식, 태그가 변영되지 않는다
+		
+		var str2 = $("#p3").text();			//text는 내부에 있는 다른 태그는 읽어오지 않는다
+		console.log(str2);
+		
+	</script>
+	
+</html>
