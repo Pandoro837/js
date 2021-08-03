@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="/js/assets/js/jquery/jquery-1.12.4.js"></script>
+
+<title>Insert title here</title>
+</head>
+
+<body>
+	<p id="p1">마바사아자차카타파하</p>
+	<p id="p2">마바사아자차카타파하</p>
+</body>
+
+	<script type="text/javascript">
+		//선택자 앞에 원하는 문자열 추가하기 			.prepend("추가할 문자열")
+		$("#p1").prepend("<strong>가나다라</strong>");	//내부에 태그가 적용된다	- .html()과 같음
+		
+		//선택자 뒤에 원하는 문자열 추가하기			.append("추가할 문자열")
+		$("#p2").append("<strong>abcd</strong>");		//내부에 태그가 적용된다	- .html()과 같음
+	</script>	
+
+</html>
