@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="/js/assets/js/jquery/jquery-1.12.4.js"></script>
+<title>Insert title here</title>
+</head>
+<body>
+	
+	<ul>
+		<li id="first" class="red">첫번째 아이템입니다.</li>
+		<li id="second" class="blue"><strong>두번째 아이템입니다.</strong></li>
+		<li id="third" class="del">세번째아이템입니다.</li>
+		<li><strong>네번째 아이템입니다.</strong></li>
+		
+	</ul>
+	<button id="btn" type="button">li요소 추가</button>
+</body>
+
+	<script type="text/javascript">
+		$("#btn").on("click", function(){
+			console.log("onclick - btn")
+			$("ul").append("<li>다섯번째아이템입니다</li>");		
+			$("ul").append("<li>여섯번째아이템입니다</li>");
+			$("ul").append("<li>일곱번째아이템입니다</li>");
+		});
+		
+		/*
+		$("li").on("click", function(){				//텍스트로 추가된 li는 이벤트 등의 함수를 이해할 수 없다
+			console.log("onclick - li tag")
+			var $this = $(this);				
+			console.log($this);
+		});
+		*/
+	
+		//click 이벤트는 ul이 받지만, function은 li에서 실행한다	("이벤트 종류", "실행할 태그", "함수")
+		$("ul").on("click", "li", function(){
+			console.log("onclick - ul");
+			var $this = $(this);
+			console.log(this);
+			
+			$this.text("최영교");
+			
+		});
+		
+	</script>
+
+</html>
